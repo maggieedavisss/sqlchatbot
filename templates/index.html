@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Chatbot</title>
+</head>
+<body>
+    <h1>SQL Chatbot</h1>
+    
+    <form method="POST" action="/process_query">
+        <label for="sentence">Enter a Query for US ETF:</label>
+        <input type="text" id="sentence" name="sentence" required>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    {% if result %}
+        <h2>Query Result:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
